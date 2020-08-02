@@ -1,6 +1,6 @@
 .c-home-main {
     display: grid;
-    grid-template-rows: 300px 565px auto 535px 745px auto 1200px;
+    grid-template-rows: 300px 565px auto 535px 745px auto auto;
 
     &__welcome {
         background-color: $s-blue-400;
@@ -27,7 +27,6 @@
     }
 
     &__enroll {
-
         position: relative;
         .o-page-content-wrapper {
             height: 100%;
@@ -38,7 +37,6 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-           overflow-y: visible;
 
             display: grid;
             grid-template-rows: 150px auto;
@@ -64,7 +62,40 @@
         }
 
         &-card {
-            display: flex;
+            display: grid;
+            grid-template-columns: 32px auto;
+            grid-template-rows:auto ;
+            column-gap: 24px;
+            padding-left: 24px;           
+
+            &-icon {
+                align-self: center;
+
+                 &::after {
+                position: relative;
+                content: "";
+                width: 24px;
+                height: 2px;
+                background-color: $s-grey-700;
+                display: inline-block;
+                bottom: -20px;
+                left: 0;
+            }
+            }
+
+            &-content {
+                display: grid;
+                grid-template-rows: auto auto;
+                row-gap: 6px;
+
+                &__key {
+                    align-self: flex-end;
+                }
+
+                &__value {
+                    color: $s-secondary-800;
+                }
+            }
         }
     }
 
@@ -72,7 +103,12 @@
         .o-page-content-wrapper {
             height: 100%;
             display: grid;
-            grid-template-rows: auto 190px;
+            grid-template-rows: 1fr 190px;
+
+            @include for-tablet-landscape-up {
+                display: grid;
+                grid-template-columns: 1fr 440px;
+            }
         }
 
         &-texts {
@@ -89,15 +125,17 @@
 
             .far {
                 position: absolute;
-                top:39%;
+                top: 39%;
                 left: 41%;
                 font-size: 60px;
                 color: $s-white;
                 background-color: transparent;
             }
-        }
 
-        
+            @include for-tablet-landscape-up {
+               align-self: center;
+            }
+        }
     }
 
     &__faq {
@@ -105,6 +143,11 @@
             height: 100%;
             display: grid;
             grid-template-rows: 1fr 1fr;
+
+            @include for-tablet-landscape-up {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         &-suitable {
@@ -134,7 +177,6 @@
                 gap: 0 18px;
                 align-items: center;
 
-
                 h1 {
                     height: 35px;
                     text-align: left;
@@ -154,7 +196,6 @@
         }
 
         &-description {
-            
             display: grid;
             grid-template-rows: 1fr 1fr;
 
@@ -171,14 +212,14 @@
             }
         }
 
-        &-classes {            
+        &-classes {
             display: grid;
-            grid-template-rows: auto auto auto auto auto; 
-            gap: 16px 0;  
+            grid-template-rows: auto auto auto auto auto;
+            gap: 16px 0;
 
             &-class {
-              margin-left: 14px;
-              width: 60%;
+                margin-left: 14px;
+                width: 60%;
             }
 
             .fa {

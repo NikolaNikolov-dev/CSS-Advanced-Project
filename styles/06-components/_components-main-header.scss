@@ -1,10 +1,10 @@
 .c-main-header {
-
     display: grid;
     align-content: center;
     .o-page-content-wrapper {
         display: grid;
         grid-template-columns: auto 1fr auto;
+        grid-template-rows: 74px;
 
         .o-logo-wrapper {
             display: grid;
@@ -13,6 +13,36 @@
 
             img {
                 align-self: center;
+            }
+        }
+
+        .c-main-navbar {
+            padding-right: 32px;
+            .c-main-navbar__list {
+                height: 100%;
+                display: grid;
+                grid-template-columns: auto auto auto auto auto 32px;
+                column-gap: 24px;
+                justify-content: end;
+
+                &-item {
+                    display: grid;
+                    grid-template-rows: auto;
+                    align-self: center;
+
+                    &__link {
+                        color: $s-grey-700;
+                        padding: 29px 12px;
+
+                        &:hover {
+                            color: $s-secondary-800;
+                        }
+                    }
+                }
+            }
+
+            @include for-tablet-landscape-up {
+                display: grid;
             }
         }
     }
