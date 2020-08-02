@@ -1,0 +1,19 @@
+.c-main-header {
+
+    display: grid;
+    align-content: center;
+    .o-page-content-wrapper {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+
+        .o-logo-wrapper {
+            display: grid;
+            grid-template-columns: 13px 1fr;
+            column-gap: 14px;
+
+            img:first-child {
+                align-self: center;
+            }
+        }
+    }
+}

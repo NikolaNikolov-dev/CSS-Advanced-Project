@@ -1,0 +1,183 @@
+.c-home-main {
+    display: grid;
+    grid-template-rows: 300px 565px auto 535px 745px auto 1200px;
+
+    &__welcome {
+        background-color: $s-blue-400;
+
+        &-heading {
+            justify-self: center;
+            align-self: flex-start;
+            text-align: center;
+            color: $s-white;
+            padding: 0 5%;
+        }
+
+        .o-page-content-wrapper {
+            height: 100%;
+            background-color: $s-blue-400;
+            display: grid;
+            grid-template-rows: 85px 1fr;
+
+            .btn {
+                justify-self: center;
+                align-self: flex-end;
+            }
+        }
+    }
+
+    &__enroll {
+
+        position: relative;
+        .o-page-content-wrapper {
+            height: 100%;
+            position: absolute;
+            top: -60px;
+            left: 4%;
+            background: url("/assets/images/points-white.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+           overflow-y: visible;
+
+            display: grid;
+            grid-template-rows: 150px auto;
+
+            .btn {
+                justify-self: center;
+                align-self: center;
+            }
+        }
+
+        &-button-wrapper {
+            display: grid;
+
+            .btn {
+                justify-self: center;
+                align-self: center;
+            }
+        }
+
+        &-cards {
+            display: grid;
+            grid-template-rows: 100px 100px 100px 100px;
+        }
+
+        &-card {
+            display: flex;
+        }
+    }
+
+    &__description {
+        .o-page-content-wrapper {
+            height: 100%;
+            display: grid;
+            grid-template-rows: auto 190px;
+        }
+
+        &-texts {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            gap: 20px 0;
+        }
+
+        &-video {
+            width: 335px;
+            height: 190px;
+        }
+    }
+
+    &__faq {
+        .o-page-content-wrapper {
+            height: 100%;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        &-suitable {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+
+            &-heading {
+                display: grid;
+                grid-template-columns: 32px 1fr;
+                gap: 0 18px;
+                align-items: center;
+
+                h1 {
+                    height: 70px;
+                    text-align: left;
+                }
+            }
+        }
+
+        &-important {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+
+            &-heading {
+                display: grid;
+                grid-template-columns: 32px 1fr;
+                gap: 0 18px;
+                align-items: center;
+
+
+                h1 {
+                    height: 35px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    &__program {
+        background-color: $s-secondary-900;
+
+        .o-page-content-wrapper {
+            height: 100%;
+            display: grid;
+            grid-template-rows: 200px 445px;
+            gap: 32px 0;
+        }
+
+        &-description {
+            
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+
+            &-heading {
+                display: grid;
+                grid-template-columns: 32px 1fr;
+                gap: 0 18px;
+                align-items: center;
+
+                h1 {
+                    height: 70px;
+                    text-align: left;
+                }
+            }
+        }
+
+        &-classes {            
+            display: grid;
+            grid-template-rows: auto auto auto auto auto; 
+            gap: 16px 0;  
+
+            &-class {
+              margin-left: 14px;
+              width: 60%;
+            }
+
+            .fa {
+                margin-right: 21px;
+            }
+        }
+    }
+
+    &__info {
+        .o-page-content-wrapper {
+            display: grid;
+            grid-template-rows: auto auto;
+        }
+    }
+}
