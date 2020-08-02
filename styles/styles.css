@@ -1,4 +1,4 @@
-@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 /*! modern-normalize v0.7.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -459,8 +459,20 @@ h4 {
 }
 
 .c-home-main__description-video {
+  position: relative;
+  -ms-grid-column-align: center;
+      justify-self: center;
   width: 335px;
   height: 190px;
+}
+
+.c-home-main__description-video .far {
+  position: absolute;
+  top: 39%;
+  left: 41%;
+  font-size: 60px;
+  color: #FFFFFF;
+  background-color: transparent;
 }
 
 .c-home-main__faq .o-page-content-wrapper {
@@ -600,7 +612,7 @@ h4 {
           column-gap: 14px;
 }
 
-.c-main-header .o-page-content-wrapper .o-logo-wrapper img:first-child {
+.c-main-header .o-page-content-wrapper .o-logo-wrapper img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

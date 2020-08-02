@@ -82,9 +82,22 @@
         }
 
         &-video {
+            position: relative;
+            justify-self: center;
             width: 335px;
             height: 190px;
+
+            .far {
+                position: absolute;
+                top:39%;
+                left: 41%;
+                font-size: 60px;
+                color: $s-white;
+                background-color: transparent;
+            }
         }
+
+        
     }
 
     &__faq {
