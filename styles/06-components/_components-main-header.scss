@@ -1,10 +1,12 @@
 .c-main-header {
     display: grid;
     align-content: center;
+    
     .o-page-content-wrapper {
         display: grid;
         grid-template-columns: auto 1fr auto;
         grid-template-rows: 74px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);;
 
         .o-logo-wrapper {
             display: grid;

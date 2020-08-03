@@ -103,6 +103,7 @@
         .o-page-content-wrapper {
             height: 100%;
             display: grid;
+            row-gap: 32px;
             grid-template-rows: 1fr 190px;
 
             @include for-tablet-landscape-up {
