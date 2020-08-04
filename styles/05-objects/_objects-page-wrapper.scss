@@ -2,10 +2,16 @@
     min-width: 375px;
     min-height: 100%;
     display: grid;
-    grid-template-rows: 70px 1fr auto;
+    grid-template-rows: 74px auto auto;
 }
 
 .o-page-content-wrapper {
-    width: 92%;
+    width: 90%;
     margin: 0 auto;
+
+    @media  (min-width: 1440px) {
+
+        width: 1290px;
+    }
+    
 }

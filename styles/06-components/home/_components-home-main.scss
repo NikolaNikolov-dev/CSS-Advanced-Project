@@ -1,6 +1,7 @@
 .c-home-main {
     display: grid;
-    grid-template-rows: 300px 565px auto 535px 745px auto auto;
+    grid-template-rows: 300px 565px auto auto 745px auto auto;
+    row-gap: 64px;
 
     &__welcome {
         background-color: $s-blue-400;
@@ -64,23 +65,23 @@
         &-card {
             display: grid;
             grid-template-columns: 32px auto;
-            grid-template-rows:auto ;
+            grid-template-rows: auto;
             column-gap: 24px;
-            padding-left: 24px;           
+            padding-left: 24px;
 
             &-icon {
                 align-self: center;
 
-                 &::after {
-                position: relative;
-                content: "";
-                width: 24px;
-                height: 2px;
-                background-color: $s-grey-700;
-                display: inline-block;
-                bottom: -20px;
-                left: 0;
-            }
+                &::after {
+                    position: relative;
+                    content: "";
+                    width: 24px;
+                    height: 2px;
+                    background-color: $s-grey-700;
+                    display: inline-block;
+                    bottom: -20px;
+                    left: 0;
+                }
             }
 
             &-content {
@@ -126,15 +127,16 @@
 
             .far {
                 position: absolute;
-                top: 39%;
-                left: 41%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 font-size: 60px;
                 color: $s-white;
                 background-color: transparent;
             }
 
             @include for-tablet-landscape-up {
-               align-self: center;
+                align-self: center;
             }
         }
     }
@@ -144,6 +146,7 @@
             height: 100%;
             display: grid;
             grid-template-rows: 1fr 1fr;
+            row-gap: 32px;
 
             @include for-tablet-landscape-up {
                 display: grid;
@@ -151,39 +154,39 @@
             }
         }
 
-        &-suitable {
-            display: grid;
-            grid-template-rows: 1fr 1fr;
+        // &-suitable {
+        //     display: grid;
+        //     grid-template-rows: 1fr 1fr;
 
-            &-heading {
-                display: grid;
-                grid-template-columns: 32px 1fr;
-                gap: 0 18px;
-                align-items: center;
+        //     &-heading {
+        //         display: grid;
+        //         grid-template-columns: 32px 1fr;
+        //         gap: 0 18px;
+        //         align-items: center;
 
-                h1 {
-                    height: 70px;
-                    text-align: left;
-                }
-            }
-        }
+        //         h1 {
+        //             height: 70px;
+        //             text-align: left;
+        //         }
+        //     }
+        // }
 
-        &-important {
-            display: grid;
-            grid-template-rows: 1fr 1fr;
+        // &-important {
+        //     display: grid;
+        //     grid-template-rows: 1fr 1fr;
 
-            &-heading {
-                display: grid;
-                grid-template-columns: 32px 1fr;
-                gap: 0 18px;
-                align-items: center;
+        //     &-heading {
+        //         display: grid;
+        //         grid-template-columns: 32px 1fr;
+        //         gap: 0 18px;
+        //         align-items: center;
 
-                h1 {
-                    height: 35px;
-                    text-align: left;
-                }
-            }
-        }
+        //         h1 {
+        //             height: 35px;
+        //             text-align: left;
+        //         }
+        //     }
+        // }
     }
 
     &__program {
@@ -196,22 +199,22 @@
             gap: 32px 0;
         }
 
-        &-description {
-            display: grid;
-            grid-template-rows: 1fr 1fr;
+        // &-description {
+        //     display: grid;
+        //     grid-template-rows: 1fr 1fr;
 
-            &-heading {
-                display: grid;
-                grid-template-columns: 32px 1fr;
-                gap: 0 18px;
-                align-items: center;
+        //     &-heading {
+        //         display: grid;
+        //         grid-template-columns: 32px 1fr;
+        //         gap: 0 18px;
+        //         align-items: center;
 
-                h1 {
-                    height: 70px;
-                    text-align: left;
-                }
-            }
-        }
+        //         h1 {
+        //             height: 70px;
+        //             text-align: left;
+        //         }
+        //     }
+        // }
 
         &-classes {
             display: grid;
@@ -229,10 +232,68 @@
         }
     }
 
+    @include for-tablet-landscape-up {
+        .c-home-main__certificate {
+            display: block;
+
+            .o-page-content-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 32px;
+                height: 100%;
+            }
+
+            &-image-wrapper {
+                width: 363px;
+                height: 256px;
+                background-color: $s-grey-300;
+                justify-self: center;
+                align-self: center;
+                display: grid;
+                align-content: center;
+                justify-content: center;
+            }
+
+            &-description {
+                align-self: center;
+            }
+        }
+    }
+
     &__info {
+        height: 100%;
+
         .o-page-content-wrapper {
+            height: 100%;
             display: grid;
-            grid-template-rows: auto auto;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 32px;
+            padding-bottom: 96px;
+
+            @include for-tablet-landscape-up {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                column-gap: 32px;
+                height: 100%;
+            }
+
+            @include for-desktop-up {
+                height: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 32px;
+            }
+        }
+
+        &-location {
+            @include for-tablet-landscape-up {
+                height: min-content;
+            }
+
+            @include for-desktop-up {
+                height: min-content;
+            }
         }
     }
 }
