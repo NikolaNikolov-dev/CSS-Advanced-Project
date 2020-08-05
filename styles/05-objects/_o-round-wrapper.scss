@@ -1,0 +1,10 @@
+.o-round-wrapper {
+    border: 8px solid $s-primary-300;
+    border-radius: 50%;
+    width: 175px;
+    height: 172px;
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}

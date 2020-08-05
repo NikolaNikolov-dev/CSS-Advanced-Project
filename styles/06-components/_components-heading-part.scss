@@ -1,0 +1,14 @@
+.c-heading-part {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    align-content: center;
+    row-gap: 24px;
+
+    &--centered {
+        text-align: center;
+    }
+
+    &__left {
+        text-align: left;
+    }
+}

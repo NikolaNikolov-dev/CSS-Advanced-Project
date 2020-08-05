@@ -1,0 +1,40 @@
+.c-card-main {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-rows: min-content auto;
+    row-gap: 16px;
+    column-gap: 16px;
+    min-height: 168px;
+
+    @include for-tablet-landscape-up {
+        column-gap: 26px;
+    }
+
+    @include for-desktop-up {
+        column-gap: 36px;
+    }
+
+    grid-template-areas: "icon heading"
+                        "icon content";
+
+        &__icon {
+            grid-area: icon;
+        }    
+        
+        &__heading {
+            grid-area: heading;
+        }
+
+        &__content {
+            grid-area: content;
+        }
+
+        &__content {
+            display: grid;
+            grid-template-rows: min-content;
+                    row-gap: 20px;
+                    grid-auto-flow: row;
+                    grid-auto-rows: min-content;
+
+        }
+}
