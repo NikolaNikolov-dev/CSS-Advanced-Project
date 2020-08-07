@@ -67,7 +67,7 @@
             left: 0;
         }
 
-        @include for-tablet-landscape-up {
+        @include for-desktop-up {
             display: block !important;
             width: 220px;
         }
