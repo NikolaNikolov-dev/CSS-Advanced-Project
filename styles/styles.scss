@@ -2,29 +2,34 @@
 
 @import './03-generic/_generic-normalize';
 
-@import './01-settings/_settings-box-shadows';
+@import './01-settings/_settings-shadows';
 @import './01-settings/_settings-breakpoints';
 @import './01-settings/_settings-colors';
 @import './01-settings/_settings-typography';
 
-@import './04-elements/elements-list';
-@import './04-elements/elements-links';
+@import './04-elements/_elements-list';
+@import './04-elements/_elements-links';
 
 @import './05-objects/_objects-box';
 @import './05-objects/_objects-page-wrapper';
-@import './05-objects/objects-logo-wrapper';
-@import './05-objects/objects-burger-wrapper';
-@import './05-objects/objects-select-like';
-@import './05-objects/o-round-wrapper';
+@import './05-objects/_objects-logo-wrapper';
+@import './05-objects/_objects-burger-wrapper';
+@import './05-objects/_objects-select-like';
+@import './05-objects/_o-round-wrapper';
 
+@import './06-components/_components-button';
 @import './06-components/home/_components-home-main';
 @import './06-components/_components-main-header';
 @import './06-components/_components-main-footer';
-@import './06-components/components-card-main';
-@import './06-components/trainings/components-trainings-main';
-@import './06-components/components-heading-part';
-@import './06-components/trainings/components-trainers-card';
+@import './06-components/_components-card-main';
+@import './06-components/trainings/_components-trainings-main';
+@import './06-components/_components-heading-part';
+@import './06-components/trainings/_components-leaders-card';
+@import './06-components/trainings/_components-trainers-card';
+@import './06-components/contact-us/_components-contact-us-main';
+@import './06-components/_components-input';
 
 
-@import './07-utilities/utilities-hidden';
-@import './07-utilities/utilities-underline-link';
+@import './07-utilities/_utilities-hidden';
+@import './07-utilities/_utilities-underline-link';
+@import './07-utilities/_utilities-text-bold';

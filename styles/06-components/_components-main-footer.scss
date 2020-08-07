@@ -2,6 +2,30 @@
     background-color: $s-grey-700;
     position: relative;
     height: 452px;
+    display: grid;
+    grid-template-columns: auto;
+
+    h5 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+
+        @include for-tablet-landscape-up {
+            width: max-content;
+        }
+    }
+
+    a {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+
+        @include for-tablet-landscape-up {
+            width: max-content;
+        }
+    }
 
     @include for-tablet-landscape-up {
         height: 312px;
@@ -19,12 +43,14 @@
     }
 
     .o-page-content-wrapper {
-        height: 100%;
+        // height: 100%;
         display: grid;
         grid-template-rows: auto 100px;
+        // justify-self: center;
+        // align-self: center;
 
         @include for-tablet-landscape-up {
-            height: 100%;
+            // height: 100%;
             grid-template-columns: 220px auto;
             grid-template-rows: auto;
             column-gap: 25px;
@@ -70,6 +96,9 @@
         @include for-tablet-landscape-up {
             display: grid;
             height: 100%;
+            grid-template-rows: 38px;
+            max-width: 177px;
+            text-align: left;
 
             &-text {
                 color: $s-grey-500;
@@ -86,14 +115,17 @@
 
     &__menu {
         height: 100%;
+        width: 100%;
         display: grid;
         grid-template-columns: auto auto;
+        // justify-self: center;
+        align-self: center;
 
         color: $s-white;
 
         @include for-tablet-landscape-up {
-            display: grid;
-            grid-template-columns: min-content min-content;
+            display: grid !important;
+            grid-template-columns: max-content max-content;
             align-content: center;
             column-gap: 25px;
             // height: 100%;
@@ -111,19 +143,22 @@
         &-left {
             // height: 100%;
             display: grid;
-            grid-template-rows: min-content min-content;
+            grid-template-rows: max-content max-content;
+            grid-template-columns: auto;
             row-gap: 32px;
 
             @include for-tablet-landscape-up {
                 display: grid;
-                grid-template-columns: min-content min-content;
+                grid-template-columns: max-content max-content;
+                grid-template-rows: auto;
+
                 column-gap: 25px;
                 height: 100%;
             }
 
             @include for-desktop-up {
                 display: grid;
-                grid-template-columns: auto auto;
+                grid-template-columns: max-content max-content;
                 column-gap: 25px;
                 height: 100%;
             }
@@ -151,7 +186,7 @@
 
             @include for-desktop-up {
                 display: grid;
-                grid-template-columns: auto auto;
+                grid-template-columns: max-content max-content;
                 column-gap: 25px;
                 height: 100%;
             }
@@ -160,17 +195,18 @@
         &-kids {
             display: grid;
             grid-template-rows: 20px auto;
-            min-width: 167px;
+            grid-template-columns: max-content;
+            // min-width: 167px;
             row-gap: 16px;
 
             &__list {
                 display: grid;
-                grid-template-rows: repeat(7, 10px);
+                grid-template-rows: 10px 10px 10px 10px 10px 10px 10px;
                 row-gap: 10px;
 
                 @include for-desktop-up {
                     display: grid;
-                    grid-template-rows: repeat(5, 10px);
+                    grid-template-rows: 10px 10px 10px 10px 10px;
                     row-gap: 10px;
                     grid-auto-flow: column;
                     grid-auto-columns: 110px;
@@ -205,7 +241,7 @@
 
             &-list {
                 display: grid;
-                grid-template-rows: repeat(5, 10px);
+                grid-template-rows: 10px 10px 10px 10px 10px;
                 row-gap: 10px;
             }
         }
@@ -214,10 +250,6 @@
             @include for-tablet-landscape-up {
                 display: block;
             }
-        }
-
-        &-rights-tablet-and-up {
-            justify-self: left;
         }
     }
 }
