@@ -1,24 +1,24 @@
 .c-home-main {
     display: grid;
-    grid-template-rows: 300px 565px auto auto 745px auto auto;
-    row-gap: 64px;
+    grid-template-rows: 300px 565px auto auto auto auto auto;
 
     &__welcome {
         background-color: $s-blue-400;
 
         &-heading {
-            justify-self: center;
-            align-self: flex-start;
             text-align: center;
             color: $s-white;
-            padding: 0 5%;
+            max-width: 600px;
         }
 
         .o-page-content-wrapper {
             height: 100%;
             background-color: $s-blue-400;
             display: grid;
-            grid-template-rows: 85px 1fr;
+            grid-template-rows: 22px auto;
+            row-gap: 24px;
+            align-content: center;
+            justify-content: center;
 
             .btn {
                 justify-self: center;
@@ -28,30 +28,18 @@
     }
 
     &__enroll {
-        position: relative;
         .o-page-content-wrapper {
             height: 100%;
-            position: absolute;
-            top: -60px;
-            left: 4%;
-            background: url("/assets/images/points-white.svg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-
+            // position: absolute;
+            // top: -60px;
+            // left: 0;
             display: grid;
-            grid-template-rows: 150px auto;
+            grid-template-rows: 150px 12px auto;
+            box-shadow: $s-third-shadow;
+            border-radius: 12px;
 
             .btn {
-                justify-self: center;
-                align-self: center;
-            }
-        }
-
-        &-button-wrapper {
-            display: grid;
-
-            .btn {
+                padding: 16px 94px;
                 justify-self: center;
                 align-self: center;
             }
@@ -106,24 +94,56 @@
             display: grid;
             row-gap: 32px;
             grid-template-rows: 1fr 190px;
+            grid-template-columns: auto;
+            color: $s-grey-700;
 
             @include for-tablet-landscape-up {
                 display: grid;
-                grid-template-columns: 1fr 440px;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto;
+                column-gap: 20px;
+            }
+
+            @include for-desktop-up {
+                column-gap: 36px;
             }
         }
 
         &-texts {
             display: grid;
             grid-template-rows: auto auto auto;
-            gap: 20px 0;
+            grid-template-columns: auto;
+            row-gap: 20px;
         }
-
+        
         &-video {
             position: relative;
             justify-self: center;
             width: 335px;
             height: 190px;
+            
+            @include for-tablet-landscape-up {
+                align-self: center;
+            }
+
+            @include for-middle-desktop-up {
+                position: relative;
+                align-self: center;
+                max-width: 440px;
+                max-height: 248px;
+            }
+
+            &-mobile {
+                @include for-middle-desktop-up {
+                    display: none;
+                }
+            }
+
+            &-desktop {
+                @include for-middle-desktop-up {
+                    display: block;
+                }
+            }
 
             .far {
                 position: absolute;
@@ -135,9 +155,6 @@
                 background-color: transparent;
             }
 
-            @include for-tablet-landscape-up {
-                align-self: center;
-            }
         }
     }
 
@@ -145,12 +162,21 @@
         .o-page-content-wrapper {
             height: 100%;
             display: grid;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 1fr 10px 1fr;
+            grid-template-columns: auto;
+            padding: 64px 0;
             row-gap: 32px;
+            color: $s-grey-700;
 
             @include for-tablet-landscape-up {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr 10px 1fr;
+                grid-template-rows: auto;
+                column-gap: 48px;
+            }
+
+            @include for-tablet-landscape-up {
+                column-gap: 88px;
             }
         }
 
@@ -190,44 +216,65 @@
     }
 
     &__program {
-        background-color: $s-secondary-900;
+        background-color: $s-secondary-400;
 
         .o-page-content-wrapper {
-            height: 100%;
+            // height: 100%;
             display: grid;
-            grid-template-rows: 200px 445px;
-            gap: 32px 0;
+            // grid-template-rows: auto min;
+            // grid-template-columns: auto;
+            grid-template-rows: min-content auto;
+            grid-template-columns: auto;
+            row-gap: 32px;
+            color: $s-grey-700;
+            padding: 64px 0;
+
+            @include for-desktop-up {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto;
+            }
         }
 
-        // &-description {
+        // &-wrapper {
+        //     height: 100%;
         //     display: grid;
-        //     grid-template-rows: 1fr 1fr;
-
-        //     &-heading {
-        //         display: grid;
-        //         grid-template-columns: 32px 1fr;
-        //         gap: 0 18px;
-        //         align-items: center;
-
-        //         h1 {
-        //             height: 70px;
-        //             text-align: left;
-        //         }
-        //     }
+        //     grid-template-rows: min-content auto;
+        //     grid-template-columns: auto;
+        //     row-gap: 32px;
+        //     color: $s-grey-700;
+        //     // max-width: 740px;
         // }
+
+        &-image-wrapper {
+            @include for-desktop-up {
+                display: block;
+            }
+        }
+
+        //    &-description {
+
+        //    }
 
         &-classes {
             display: grid;
-            grid-template-rows: auto auto auto auto auto;
-            gap: 16px 0;
+            grid-template-rows: 22px 52px 52px 94px 74px;
+            row-gap: 16px;
+            position: relative;
 
             &-class {
-                margin-left: 14px;
-                width: 60%;
+                padding-left: 14px;
+                font-size: 18px;
+                max-width: 265px;
             }
 
-            .fa {
-                margin-right: 21px;
+            &-heading {
+                font-size: 18px;
+            }
+
+            .arrow-down {
+                position: absolute;
+                right: 20px;
             }
         }
     }

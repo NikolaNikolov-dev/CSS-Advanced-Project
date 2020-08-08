@@ -1,0 +1,14 @@
+.c-input {
+    height: 100%;
+    border-radius: 6px;
+
+    &::placeholder {
+        height: 20px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        padding-left: 16px;
+        padding-top: 16px;
+    }
+}

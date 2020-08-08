@@ -29,6 +29,14 @@
             grid-template-columns: auto;
             grid-template-rows: auto;
             color: $s-white;
+
+            .c-heading-part {
+
+                &__description {
+                    justify-self: center;
+                    max-width: 850px;
+                }
+            }
         }
     }
 
@@ -37,16 +45,8 @@
             height: 100%;
             display: grid;
             grid-template-rows: auto auto;
-            // grid-template-columns: auto;
             justify-content: center;
             row-gap: 64px;
-
-            // @include for-tablet-landscape-up {
-            //     display: grid;
-            //     grid-template-columns: min-content min-content !important;
-            // grid-template-rows: auto;
-            //     column-gap: 26px;
-            // }
 
             @include for-desktop-up {
                 display: grid;

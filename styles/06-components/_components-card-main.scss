@@ -4,7 +4,7 @@
     grid-template-rows: min-content auto;
     row-gap: 16px;
     column-gap: 16px;
-    min-height: 168px;
+    // min-height: 168px;
 
     @include for-tablet-landscape-up {
         column-gap: 26px;
@@ -35,6 +35,5 @@
                     row-gap: 20px;
                     grid-auto-flow: row;
                     grid-auto-rows: min-content;
-
         }
 }
