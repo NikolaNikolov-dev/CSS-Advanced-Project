@@ -474,6 +474,24 @@ a:hover {
       grid-template-rows: 300px 565px auto auto auto auto auto;
 }
 
+@media (min-width: 900px) {
+  .c-home-main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 300px 275px auto auto auto auto auto;
+        grid-template-rows: 300px 275px auto auto auto auto auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-home-main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 300px 112px auto auto auto auto auto;
+        grid-template-rows: 300px 112px auto auto auto auto auto;
+  }
+}
+
 .c-home-main__welcome {
   background-color: #44A9F8;
 }
@@ -506,15 +524,36 @@ a:hover {
       align-self: flex-end;
 }
 
+.c-home-main__enroll {
+  position: relative;
+}
+
 .c-home-main__enroll .o-page-content-wrapper {
   height: 100%;
+  position: absolute;
+  top: -60px;
+  left: 4%;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 150px 12px auto;
       grid-template-rows: 150px 12px auto;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  background-color: #FFFFFF;
   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
+}
+
+@media (min-width: 1200px) {
+  .c-home-main__enroll .o-page-content-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 12px auto;
+        grid-template-columns: auto 12px auto;
+    -ms-grid-rows: 112px;
+        grid-template-rows: 112px;
+  }
 }
 
 .c-home-main__enroll .o-page-content-wrapper .btn {
@@ -526,11 +565,39 @@ a:hover {
       align-self: center;
 }
 
+@media (min-width: 1200px) {
+  .c-home-main__enroll .o-page-content-wrapper .btn {
+    padding: 14px 32px;
+  }
+}
+
 .c-home-main__enroll-cards {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 100px 100px 100px 100px;
       grid-template-rows: 100px 100px 100px 100px;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+@media (min-width: 900px) {
+  .c-home-main__enroll-cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    -ms-grid-rows: 112px;
+        grid-template-rows: 112px;
+    -webkit-column-gap: 12px;
+            column-gap: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-home-main__enroll-cards {
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
+  }
 }
 
 .c-home-main__enroll-card {
@@ -552,7 +619,7 @@ a:hover {
 }
 
 .c-home-main__enroll-card-icon::after {
-  position: relative;
+  position: absolute;
   content: "";
   width: 24px;
   height: 2px;
@@ -570,13 +637,19 @@ a:hover {
   row-gap: 6px;
 }
 
-.c-home-main__enroll-card-content__key {
+.c-home-main__enroll-card-content-key {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
 }
 
-.c-home-main__enroll-card-content__value {
+.c-home-main__enroll-card-content-value {
   color: #FF9100;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .c-home-main__description .o-page-content-wrapper {
