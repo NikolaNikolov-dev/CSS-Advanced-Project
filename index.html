@@ -21,7 +21,8 @@
                         >
                             <path d="M1.38355e-07 18.6523L8.94767e-07 1.34765C9.47143e-07 0.149415 1.53275 -0.450644 2.42915 0.396621L11.5832 9.04896C12.1389 9.57417 12.1389 10.4258 11.5832 10.951L2.42915 19.6033C1.53275 20.4507 8.5979e-08 19.8506 1.38355e-07 18.6523Z" fill="#FF9100"/>
                         </svg>
-                        <img src="./assets/images/logo-vertical.svg" alt="Logo vertical">
+                        <img class="logo-vertical" src="./assets/images/logo-vertical.svg" alt="Logo vertical">
+                        <img class="logo-horizontal u-hidden" src="./assets/images/logo-horizontal.svg" alt="Logo horizontal">
                     </section>
                     <nav class="c-main-navbar u-hidden">
                         <ul class="c-main-navbar__list">
@@ -89,7 +90,9 @@
                 <section class="c-home-main__enroll">
                     <div class="o-page-content-wrapper">
                         <button class="btn btn--secondary">записване</button>
-                        <section class="c-home-main__enroll-points o-box"></section>
+                        <section class="c-home-main__enroll-points">
+                            <div class="c-dotted-line"></div>
+                        </section>
                         <section class="c-home-main__enroll-cards">
                             <article class="c-home-main__enroll-card">
                                 <img class="c-home-main__enroll-card-icon" src="./assets/images/money.svg" alt="Money">
@@ -158,7 +161,8 @@
                 </section>
                 <section class="c-home-main__program">
                     <div class="o-page-content-wrapper">
-                            <!-- <section class="c-home-main__program-description c-card-main">
+                        <section class="description-wrapper">
+                            <section class="c-home-main__program-description c-card-main">
                                 <img class="c-card-main__icon" src="./assets/images/book.svg" alt="Program">
                                 <h1 class="c-card-main__heading">Програма на обучението</h1>
                                 <section class="c-card-main__content">
@@ -219,35 +223,34 @@
                                         <path d="M1.88 0.453125L8 6.55979L14.12 0.453125L16 2.33312L8 10.3331L0 2.33312L1.88 0.453125Z" fill="#919191"/>
                                     </svg>
                                 </div>
-                            </section> -->
-                            <!-- <section class="c-home-main__program-image-wrapper u-hidden">
-                                <img src="./assets/images/program.svg" alt="Program">
-                            </section> -->
+                            </section>
+                        </section>
+                        <section class="c-home-main__program-image-wrapper u-hidden">
+                            <img src="./assets/images/program.svg" alt="Program">
+                        </section>
                     </div>
                 </section>
                 <section class="c-home-main__certificate u-hidden">
                     <div class="o-page-content-wrapper">
                         <section class="c-home-main__certificate-description c-card-main">
-                            <!-- <section class="c-home-main__program-description-heading"> -->
                             <img class="c-card-main__icon" src="./assets/images/reward.svg" alt="Program">
                             <h1 class="c-card-main__heading">Сертификат</h1>
-                            <!-- </section> -->
                             <section class="c-card-main__content">
                                 <p class="c-card-main__content-row">Да се опише максимално подробно кога и къде се провеждат занятията. За примера съм изпозлвал описание от онлайн курс</p>
                             </section>
                         </section>
-                        <section class="c-home-main__certificate-image-wrapper">
-                            <p class="c-card-main__certificate-image-text">Снимка на сертификата</p>
+                        <section class="c-home-main__certificate-wrapper">
+                            <article class="c-home-main__certificate-wrapper-image">
+                                <p class="c-home-main__certificate-wrapper-description">Снимка на сертификата</p>
+                            </article>
                         </section>
                     </div>
                 </section>
                 <section class="c-home-main__info">
                     <div class="o-page-content-wrapper">
                         <section class="c-home-main__info-location c-card-main">
-                            <!-- <section class="c-home-main__info-location-heading"> -->
                             <img class="c-card-main__icon" src="./assets/images/clock.svg" alt="Clock">
                             <h1 class="c-card-main__heading">Кога и къде се провеждат занятията?</h1>
-                            <!-- </section> -->
                             <section class="c-card-main__content">
                                 <p class="c-card-main__content-row">
                                     Да се опише максимално подробно
@@ -271,11 +274,10 @@
                                 </p>
                             </section>
                         </section>
+                        <section class="c-home-main__info-points o-box"></section>
                         <section class="c-home-main__info-additional c-card-main">
-                            <!-- <section class="c-home-main__info-additional-heading"> -->
                             <img class="c-card-main__icon" src="./assets/images/innovation.svg" alt="Innovation">
                             <h1 class="c-card-main__heading">Допълнителна информация</h1>
-                            <!-- </section> -->
                             <section class="c-card-main__content">
                                 <p class="c-card-main__content-row">
                                     В деня на първото занятие на вашето дете ще имаме нужда от два подписани и попълнени екземпляра на договор за обучение в SoftUni Kids. Ще получите договора на имейл адреса ви, след заплащането на обучението. Може да го разгледате от

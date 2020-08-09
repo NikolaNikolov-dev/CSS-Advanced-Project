@@ -1,6 +1,6 @@
 .c-contact-us-main {
     display: grid;
-    grid-template-rows: auto auto 600px auto;
+    grid-template-rows: auto auto auto auto;
 
     // row-gap: 64px;
 
@@ -17,9 +17,10 @@
         display: grid;
         grid-template-rows: auto;
         grid-template-columns: auto;
+        position: relative;
 
         @include for-desktop-up {
-           height: 84px;
+            height: 84px;
         }
 
         .o-page-content-wrapper {
@@ -39,16 +40,16 @@
             @include for-desktop-up {
                 position: absolute;
                 display: grid;
-                grid-template-rows: auto 32px;
+                grid-template-rows: auto auto;
                 grid-template-columns: auto;
                 bottom: 0;
                 left: 75px;
                 z-index: 99;
                 width: 520px;
                 height: 380px;
-                 box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12),
+                box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12),
                     0px 1px 3px rgba(0, 0, 0, 0.2);
-                border-radius: 12px;       
+                border-radius: 12px;
                 row-gap: 30px;
             }
 
@@ -77,13 +78,14 @@
                 display: grid;
                 grid-template-columns: 215px auto;
                 grid-auto-rows: auto;
-               
-                // column-gap: 48px;
             }
         }
 
         &-heading {
             color: $s-primary-300;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
         }
 
         &-address {
@@ -110,14 +112,13 @@
     }
 
     &__write-us {
-
         .o-page-content-wrapper {
             display: grid;
             max-width: 850px;
             grid-template-rows: 24px 140px 192px 48px;
             grid-template-columns: auto;
             background-color: $s-white;
-            padding-top: 96px;
+            padding: 96px 0;
             row-gap: 30px;
 
             @include for-tablet-landscape-up {
@@ -139,13 +140,11 @@
         &-inputs {
             display: grid;
             grid-template-rows: 50px 50px;
-            // justify-self: center;
             row-gap: 30px;
 
             @include for-tablet-landscape-up {
                 grid-template-columns: 409px 409px;
                 grid-template-rows: 50px;
-                // justify-self: center;
                 column-gap: 30px;
             }
 
@@ -159,10 +158,6 @@
                     color: $s-grey-500;
                 }
 
-                // @include for-tablet-landscape-up {
-                //     min-width: 200px;
-                //     height: 100%;
-                // }
             }
         }
 
@@ -184,19 +179,20 @@
 
         .o-page-content-wrapper {
             display: grid;
-            grid-template-rows: 36px auto;
+            grid-template-rows: auto auto;
             grid-template-columns: auto;
             row-gap: 48px;
             background-color: $s-secondary-50;
-            padding: 96px 0;
-
-            // @include for-tablet-landscape-up {
-            //     padding: 118px 0;
-            // }
+            padding-top: 96px;
+            padding-bottom: 108px;
         }
 
         &-heading {
             color: $s-primary-300;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 36px;
+            text-align: center;
         }
 
         &-transport {
@@ -219,9 +215,17 @@
 
             &-heading {
                 color: $s-primary-300;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 30px;
             }
 
             &-description {
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: auto;
+                grid-auto-rows: auto;
+                row-gap: 16px;
                 &-text {
                     color: $s-grey-700;
 
