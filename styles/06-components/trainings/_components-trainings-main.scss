@@ -102,6 +102,10 @@
             align-content: center;
             column-gap: 32px;
 
+            img {
+                vertical-align: middle;
+            }
+
             @include for-tablet-portrait-up {
                 display: grid;
                 grid-template-columns: auto auto min min !important;
