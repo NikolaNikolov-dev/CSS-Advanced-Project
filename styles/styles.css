@@ -374,8 +374,8 @@ a:hover {
 .o-round-wrapper {
   border: 8px solid #41BEAD;
   border-radius: 50%;
-  width: 170px;
-  height: 170px;
+  width: 172px;
+  height: 172px;
   overflow: hidden;
   display: -ms-grid;
   display: grid;
@@ -384,6 +384,44 @@ a:hover {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+.o-round-wrapper:hover .o-round-wrapper__overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.o-round-wrapper__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #FFFFFF;
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: bold;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  justify-items: center;
+  row-gap: 12px;
+}
+
+.o-round-wrapper__overlay {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border-radius: 50%;
+  width: 172px;
+  height: 172px;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background: rgba(255, 145, 0, 0.8);
 }
 
 .btn {
@@ -1811,12 +1849,6 @@ a:hover {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-column-gap: 32px;
-          column-gap: 32px;
-}
-
-.c-trainers-main__all-list img {
-  vertical-align: middle;
 }
 
 @media (min-width: 600px) {
@@ -1825,8 +1857,8 @@ a:hover {
     display: grid;
     -ms-grid-columns: auto auto min min !important;
         grid-template-columns: auto auto min min !important;
-    -webkit-column-gap: 46px;
-            column-gap: 46px;
+    -webkit-column-gap: 86px;
+            column-gap: 86px;
   }
 }
 
@@ -1836,8 +1868,8 @@ a:hover {
     display: grid;
     -ms-grid-columns: auto auto auto min !important;
         grid-template-columns: auto auto auto min !important;
-    -webkit-column-gap: 66px;
-            column-gap: 66px;
+    -webkit-column-gap: 86px;
+            column-gap: 86px;
   }
 }
 
@@ -1857,6 +1889,9 @@ a:hover {
     width: 100%;
     display: block !important;
   }
+  .c-trainers-main__all-list-item:nth-child(2) .o-round-wrapper__overlay {
+    left: 14px;
+  }
 }
 
 @media (min-width: 900px) {
@@ -1872,6 +1907,9 @@ a:hover {
     width: 100%;
     display: -ms-grid;
     display: grid;
+  }
+  .c-trainers-main__all-list-item:nth-child(4) .o-round-wrapper__overlay {
+    left: 12px;
   }
 }
 
@@ -2200,6 +2238,7 @@ a:hover {
       grid-template-rows: min-content min-content;
   justify-items: center;
   row-gap: 32px;
+  position: relative;
 }
 
 .c-trainers-card__info {
@@ -2397,8 +2436,8 @@ a:hover {
 .c-contact-us-main__info-address {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
+  -ms-grid-rows: 24px auto;
+      grid-template-rows: 24px auto;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   row-gap: 18px;
@@ -2413,8 +2452,8 @@ a:hover {
 .c-contact-us-main__info-working-time {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
+  -ms-grid-rows: 24px auto;
+      grid-template-rows: 24px auto;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   row-gap: 18px;
@@ -2444,8 +2483,8 @@ a:hover {
 .c-contact-us-main__info-contacts {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
+  -ms-grid-rows: 24px auto;
+      grid-template-rows: 24px auto;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   row-gap: 18px;
@@ -2709,7 +2748,7 @@ a:hover {
 }
 
 .c-dotted-line--primary-50 {
-  background: radial-gradient(circle 10px, #DFF4F1, #DFF4F1, #FFFFFF 60%, #FFFFFF 100%) 47px 0px/20px 20px repeat-x;
+  background: radial-gradient(circle 10px, #DFF4F1, #DFF4F1, #FFFFFF 60%, #FFFFFF 100%) 58px 0px/20px 20px repeat-x;
 }
 
 .c-dotted-line--secondary-100 {

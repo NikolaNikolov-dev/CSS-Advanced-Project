@@ -1,10 +1,44 @@
 .o-round-wrapper {
     border: 8px solid $s-primary-300;
     border-radius: 50%;
-    width: 170px;
-    height: 170px;
+    width: 172px;
+    height: 172px;
     overflow: hidden;
     display: grid;
     justify-content: center;
     align-content: center;
+
+        &:hover &__overlay {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        &__content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $s-white;
+            font-size: 10px;
+            line-height: 12px;
+            font-weight: bold;
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-template-columns: auto;
+            justify-items: center;
+            row-gap: 12px;
+        }
+
+        &__overlay {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            border-radius: 50%;
+            width: 172px;
+            height: 172px;
+            opacity: 0;
+            transition: 0.5s ease;
+            background: rgba(255, 145, 0, 0.8);
+        }
+    
 }
