@@ -1,62 +1,47 @@
 .c-contact-us-main {
     display: grid;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
 
-    // row-gap: 64px;
+    &__info-wrapper {
+        display: grid;
+        grid-template-columns: 4% 40% 52% 4%;
+        grid-template-rows: auto auto auto;
 
-    &__map {
-        height: 100%;
-
-        img {
-            width: 100%;
-            height: auto;
-        }
+        // @include for-desktop-up {
+        //     grid-template-rows: 128px 372px 84px;
+        // }
     }
 
     &__info {
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: auto;
-        position: relative;
+        grid-column: 2 / span 2;
+        grid-row: 3;
 
         @include for-desktop-up {
-            height: 84px;
+            grid-column: 2;
+            grid-row: 2 / span 2;
+            z-index: 33;
         }
 
-        .o-page-content-wrapper {
-            display: grid;
-            grid-template-rows: auto 32px;
-            grid-template-columns: auto;
-            background-color: $s-white;
-            row-gap: 32px;
-            padding-top: 64px;
+        // .btn {
+        //     width: 160px;
+        //     justify-self: center;
+        //     max-height: 20px;
+        //     margin-bottom: 32px;
+        // }
 
-            @include for-tablet-landscape-up {
-                display: grid;
-                grid-template-columns: auto 240px;
-                column-gap: 48px;
-            }
+        &-image-wrapper {
+            grid-column: 1 / span 4;
+            grid-row: 1 / span 2;
 
-            @include for-desktop-up {
-                position: absolute;
-                display: grid;
-                grid-template-rows: auto auto;
-                grid-template-columns: auto;
-                bottom: 0;
-                left: 75px;
-                z-index: 99;
-                width: 520px;
-                height: 380px;
-                box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12),
-                    0px 1px 3px rgba(0, 0, 0, 0.2);
-                border-radius: 12px;
-                row-gap: 30px;
-            }
+            img {
+                width: 100%;
+                height: auto;
 
-            .btn {
-                max-width: 240px;
-                justify-self: center;
-                max-height: 32px;
+                // @include for-middle-desktop-up {
+                //     width: 100%;
+                //     height: auto;
+                // }
             }
         }
 
@@ -65,19 +50,23 @@
             grid-template-rows: auto auto auto;
             grid-template-columns: auto;
             row-gap: 32px;
-            text-align: center;
+            justify-self: center;
 
             @include for-tablet-landscape-up {
                 display: grid;
                 grid-template-columns: auto auto auto;
                 grid-template-rows: auto;
-                column-gap: 32px;
+                column-gap: 128px;
             }
 
             @include for-desktop-up {
                 display: grid;
-                grid-template-columns: 215px auto;
-                grid-auto-rows: auto;
+                grid-template-columns: max-content max-content;
+                grid-template-rows: auto;
+                grid-auto-flow: row;
+                column-gap: 24px;
+                text-align: start;
+                padding-left: 32px;
             }
         }
 
@@ -90,24 +79,29 @@
 
         &-address {
             display: grid;
-            grid-template-rows: 18px auto;
-            justify-content: center;
+            grid-template-rows: 24px auto;
+            grid-template-columns: auto;
+            row-gap: 18px;
         }
 
         &-working-time {
             display: grid;
-            grid-template-rows: 18px auto;
-            justify-content: center;
+            grid-template-rows: 24px auto;
+            grid-template-columns: auto;
+            row-gap: 18px;
         }
 
         &-contacts {
             display: grid;
-            grid-template-rows: 18px auto;
-            justify-content: center;
+            grid-template-rows: 24px auto;
+            grid-template-columns: auto;
+            row-gap: 18px;
         }
 
         &-description-text {
             color: $s-grey-700;
+            max-width: 200px;
+            max-height: 60px;
         }
     }
 
@@ -118,12 +112,16 @@
             grid-template-rows: 24px 140px 192px 48px;
             grid-template-columns: auto;
             background-color: $s-white;
-            padding: 96px 0;
+            padding: 48px 0 96px 0;
             row-gap: 30px;
 
             @include for-tablet-landscape-up {
                 display: grid;
                 grid-template-rows: 24px 50px 192px 48px;
+            }
+
+            @include for-desktop-up {
+                padding-top: 96px;
             }
 
             .btn {
@@ -157,7 +155,6 @@
                 &::placeholder {
                     color: $s-grey-500;
                 }
-
             }
         }
 
