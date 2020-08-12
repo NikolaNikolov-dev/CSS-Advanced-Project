@@ -510,11 +510,17 @@ a:hover {
 .c-home-main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 300px 565px auto auto  10px auto 10px auto auto;
-      grid-template-rows: 300px 565px auto auto  10px auto 10px auto auto;
+  -ms-grid-rows: 300px 565px auto auto 10px auto 10px auto auto;
+      grid-template-rows: 300px 565px auto auto 10px auto 10px auto auto;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   padding-bottom: 108px;
+}
+
+@media (min-width: 1200px) {
+  .c-home-main .enroll-points-desktop-up {
+    display: block !important;
+  }
 }
 
 @media (min-width: 900px) {
@@ -621,9 +627,7 @@ a:hover {
 
 @media (min-width: 1200px) {
   .c-home-main__enroll-points .c-dotted-line {
-    width: 20px;
-    height: 100%;
-    background: radial-gradient(circle 10px, transparent, transparent 40%, #c4c4c4 60%, #fff 60%, #fff 100%) 41px -11px/20px 19px repeat;
+    display: none;
   }
 }
 

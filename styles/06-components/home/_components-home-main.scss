@@ -1,9 +1,21 @@
 .c-home-main {
     display: grid;
-    grid-template-rows: 300px 565px auto auto  10px auto 10px auto auto;
+    grid-template-rows: 300px 565px auto auto 10px auto 10px auto auto;
     grid-template-columns: auto;
     padding-bottom: 108px;
 
+    .enroll-points-desktop-up {
+
+        @include for-desktop-up {
+            display: block !important;
+        }
+    }
+
+    // .c-dotted-line--transparent {
+    //     @include for-desktop-up {
+    //         display: none;
+    //     }
+    // }
 
     @include for-tablet-landscape-up {
         display: grid;
@@ -77,16 +89,25 @@
         }
 
         &-points {
-
             .c-dotted-line {
                 @include for-desktop-up {
-                    width: 20px;
-                    height: 100%;
-                    background: radial-gradient(circle 10px, transparent, transparent 40%, #c4c4c4 60%, #fff 60%, #fff 100%)
-                        41px -11px/20px 19px repeat;
+                    display: none;
+                    
                 }
-            }          
+            }
+
+            
+            // .c-dotted-line {
+            //     @include for-desktop-up {
+            //         width: 20px;
+            //         height: 100%;
+            //         background: radial-gradient(circle 10px, transparent, transparent 40%, #c4c4c4 60%, #fff 60%, #fff 100%)
+            //             41px -11px/20px 19px repeat;
+            //     }
+            // }
         }
+
+      
 
         &-cards {
             display: grid;
@@ -471,7 +492,8 @@
                 @include for-tablet-landscape-up {
                     width: 20px;
                     height: 100%;
-                    background: radial-gradient(circle 10px, #ffecb3, #ffecb3, #ffffff 60%, #ffffff 100%) 40px 4px/20px 15px repeat;
+                    background: radial-gradient(circle 10px, #ffecb3, #ffecb3, #ffffff 60%, #ffffff 100%) 40px 4px/20px
+                        15px repeat;
                 }
             }
         }
