@@ -105,7 +105,7 @@
 
         &-address {
             display: grid;
-            grid-template-rows: auto auto;
+            grid-template-rows: 24px auto;
             grid-template-columns: auto;
             row-gap: 18px;
 
@@ -118,7 +118,7 @@
 
         &-working-time {
             display: grid;
-            grid-template-rows: auto auto;
+            grid-template-rows: 24px auto;
             grid-template-columns: auto;
             row-gap: 18px;
 
@@ -141,7 +141,7 @@
 
         &-contacts {
             display: grid;
-            grid-template-rows: auto auto;
+            grid-template-rows: 24px auto;
             grid-template-columns: auto;
             row-gap: 18px;
 

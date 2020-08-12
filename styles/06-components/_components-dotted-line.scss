@@ -1,0 +1,38 @@
+.c-dotted-line {
+    position: relative;
+    margin: 0;
+    height: 20px;
+    // height: 20px;
+    // background: radial-gradient(circle 10px, transparent, transparent 40%, #C4C4C4 60%, #fff 60%, #fff 100%) 47px 0px/20px 20px repeat-y;
+    // background: radial-gradient(circle 10px, $primary-50, $primary-50, $white 60%, $white 100%) 47px 0px/20px 20px repeat-x;
+    // background: radial-gradient(circle 12px, transparent, transparent 40%, #C4C4C4 60%, #fff 60%, #fff 100%) 30px 0px/20px 20px repeat-x;
+
+    &--vertical {
+        width: 20px;
+        height: 100%;
+    }
+
+    &--transparent {
+        background: radial-gradient(circle 12px, transparent, transparent 40%, #c4c4c4 60%, #fff 60%, #fff 100%) 34px 0px/20px 27px repeat-x;
+    }
+
+    &--primary-50 {
+        background: radial-gradient(circle 10px, #DFF4F1, #DFF4F1, #FFFFFF 60%, #FFFFFF 100%) 58px 0px/20px 20px repeat-x;
+    }
+
+    &--secondary-100 {
+        background: radial-gradient(circle 10px, $s-secondary-100, $s-secondary-100, $s-white 60%, $s-white 100%) 47px 0px/20px 20px repeat-x;
+    }
+
+    &--blue-400 {
+        background: radial-gradient(circle 10px, $s-blue-400, $s-blue-400, $s-white 60%, $s-white 100%) 47px 0px/20px 20px repeat;
+    }
+
+    &--before-program {
+        background: radial-gradient(circle 12px, transparent, transparent 40%, #c4c4c4 60%, #fff 60%, #fff 100%) 33px 9px/20px 27px repeat-x;
+    }
+
+    &--after-program {
+        background: radial-gradient(circle 12px, #FFCB29, #FFCB29 40%, #c4c4c4 60%, #fff 60%, #fff 100%) 33px -16px/20px 27px repeat-x;
+    }
+}
