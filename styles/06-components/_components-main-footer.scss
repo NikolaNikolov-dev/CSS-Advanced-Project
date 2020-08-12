@@ -69,10 +69,10 @@
         font-weight: normal;
         font-size: 16px;
         line-height: 19px;
-
-        // @include for-tablet-landscape-up {
-        //     width: max-content;
-        // }
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
 
         &:hover {
             color: $s-primary-300;
@@ -246,16 +246,14 @@
             grid-template-rows: min-content auto;
             grid-template-columns: max-content;
             row-gap: 24px;
-            
+
             @include for-tablet-landscape-up {
                 justify-self: end;
-                
             }
 
             &-heading {
                 @include for-tablet-landscape-up {
                     display: block !important;
-                    
                 }
             }
 
@@ -288,6 +286,7 @@
 
             &-icon {
                 &:hover {
+                    cursor: pointer;
                     path {
                         fill: $s-primary-300;
                     }

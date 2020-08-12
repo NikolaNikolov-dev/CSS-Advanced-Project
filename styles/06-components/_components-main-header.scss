@@ -55,6 +55,10 @@
                     &__link {
                         color: $s-grey-700;
                         padding: 29px 12px;
+                        transition-property: all;
+                        transition-duration: 0.5s;
+                        transition-timing-function: ease;
+                        transition-delay: 0s;
 
                         &:hover {
                             color: $s-secondary-800;
@@ -72,8 +76,8 @@
     .o-burger-wrapper {
         display: grid;
         grid-template-columns: auto 24px;
-        align-items: center;    
-        
+        align-items: center;
+
         @include for-tablet-landscape-up {
             display: grid;
             grid-template-columns: auto;
