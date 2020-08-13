@@ -284,6 +284,14 @@ h6,
 h1,
 .h1-like {
   font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h2,
+.h2-like {
+  font-style: normal;
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
@@ -975,7 +983,20 @@ a:hover {
 .c-home-main__welcome-heading {
   text-align: center;
   color: #ffffff;
-  max-width: 600px;
+  max-width: 644px;
+  font-style: normal;
+  font-weight: bold !important;
+  font-size: 30px !important;
+  line-height: 36px !important;
+}
+
+@media (min-width: 900px) {
+  .c-home-main__welcome-heading {
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 36px !important;
+    line-height: 44px !important;
+  }
 }
 
 .c-home-main__welcome .o-page-content-wrapper {
@@ -2418,6 +2439,22 @@ a:hover {
     -ms-flex-line-pack: center;
         align-content: center;
     row-gap: 46px;
+  }
+}
+
+@media (min-width: 900px) {
+  .c-trainers-main__join-heading {
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 36px !important;
+    line-height: 44px !important;
+    text-align: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .c-trainers-main__join-description {
+    text-align: center;
   }
 }
 

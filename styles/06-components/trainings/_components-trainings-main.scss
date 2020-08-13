@@ -161,6 +161,22 @@
             }
         }
 
+        &-heading {
+            @include for-tablet-landscape-up {
+                font-style: normal;
+                font-weight: 600 !important;
+                font-size: 36px !important;
+                line-height: 44px !important;
+                text-align: center;
+            }
+        }
+
+        &-description {
+            @include for-tablet-landscape-up {
+                text-align: center;
+            }
+        }
+
         &-main {
             display: grid;
             grid-template-rows: auto auto;
@@ -169,7 +185,6 @@
             @include for-tablet-landscape-up {
                 grid-template-columns: auto auto;
                 grid-template-rows: auto;
-                // justify-content: center;
                 align-content: flex-start;
                 column-gap: 48px;
             }
@@ -233,14 +248,9 @@
             display: grid;
             grid-template-rows: 48px;
             grid-template-columns: auto;
-            // justify-self: center;
-
-            // justify-content: center;
-            // align-content: center;
 
             .btn {
                 justify-self: stretch;
-                // max-width: 335px;
 
                 @include for-tablet-landscape-up {
                     max-width: 140px;
