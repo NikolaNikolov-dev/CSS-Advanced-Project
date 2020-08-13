@@ -42,7 +42,6 @@
         }
     }
 
-
     &__enroll {
         position: relative;
 
@@ -80,26 +79,20 @@
             .c-dotted-line {
                 @include for-desktop-up {
                     display: none;
-                    
                 }
             }
 
-            
             .enroll-points-desktop-up {
-
                 @include for-desktop-up {
                     display: block !important;
                 }
             }
         }
 
-      
-
         &-cards {
             display: grid;
             grid-template-rows: 100px 100px 100px 100px;
             grid-template-columns: auto;
-            // grid-auto-columns: auto;
 
             @include for-tablet-landscape-up {
                 display: grid;
@@ -119,19 +112,32 @@
             grid-template-rows: auto;
             column-gap: 24px;
             padding-left: 24px;
+            position: relative;
 
             &-icon {
                 align-self: center;
+            }
 
-                &::after {
-                    position: absolute;
-                    content: "";
-                    width: 24px;
-                    height: 2px;
-                    background-color: $s-grey-700;
-                    display: inline-block;
-                    bottom: -20px;
-                    left: 0;
+            &:not(:last-child)::after {
+                position: absolute;
+                content: "";
+                width: 24px;
+                height: 2px;
+                background-color: $s-grey-100;
+                display: inline-block;
+                bottom: 0;
+                left: 26px;
+
+                @include for-tablet-landscape-up {
+                    transform: rotate(90deg);
+                    left: unset;
+                    bottom: unset;
+                    right: -20px;
+                    top: 56px;
+                }
+
+                @include for-desktop-up {
+                    right: -40px;
                 }
             }
 
@@ -329,8 +335,6 @@
                 grid-template-rows: auto;
                 justify-items: center;
                 align-items: flex-end;
-
-                
             }
 
             .image-program {

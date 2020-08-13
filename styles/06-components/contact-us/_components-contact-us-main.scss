@@ -45,12 +45,18 @@
             grid-template-columns: auto;
 
             @include for-desktop-up {
-                grid-template-rows: 40px;
+                grid-template-rows: auto;
                 align-self: center;
             }
 
             .btn {
+                box-shadow: none;
                 justify-self: center;
+
+                padding: 14px 42px;
+                font-weight: 800;
+                text-transform: uppercase;
+                
 
                 @include for-desktop-up {
                     align-self: center;
@@ -87,12 +93,16 @@
                 grid-template-columns: max-content max-content;
                 grid-template-rows: max-content;
                 grid-auto-flow: row;
-                column-gap: 3em;
+                column-gap: 1em;
                 row-gap: 1.5em;
                 padding-top: 0;
                 text-align: start;
                 justify-content: center;
                 align-content: center;
+            }
+
+            @include for-middle-desktop-up {
+                column-gap: 2em;
             }
         }
 
@@ -125,9 +135,13 @@
             &-description {
                 display: grid;
                 grid-template-rows: auto auto;
-                grid-template-columns: auto min-content;
+                grid-template-columns: auto auto;
                 row-gap: 18px;
                 column-gap: 24px;
+
+                @include for-tablet-landscape-up {
+                    grid-template-columns: auto min-content;
+                }
 
                 &-time {
                     color: $s-secondary-800;
@@ -167,7 +181,11 @@
             }
 
             @include for-desktop-up {
-                padding-top: 96px;
+                padding-top: 48px;
+            }
+
+            @include for-middle-desktop-up {
+                padding-top: 24px;
             }
 
             .btn {

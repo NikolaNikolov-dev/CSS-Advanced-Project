@@ -2,10 +2,6 @@
     position: relative;
     margin: 0;
     height: 20px;
-    // height: 20px;
-    // background: radial-gradient(circle 10px, transparent, transparent 40%, #C4C4C4 60%, #fff 60%, #fff 100%) 47px 0px/20px 20px repeat-y;
-    // background: radial-gradient(circle 10px, $primary-50, $primary-50, $white 60%, $white 100%) 47px 0px/20px 20px repeat-x;
-    // background: radial-gradient(circle 12px, transparent, transparent 40%, #C4C4C4 60%, #fff 60%, #fff 100%) 30px 0px/20px 20px repeat-x;
 
     &--vertical {
         width: 20px;
@@ -13,7 +9,7 @@
     }
 
     &--transparent {
-        background: radial-gradient(circle 12px, transparent, transparent 40%, #c4c4c4 60%, #fff 60%, #fff 100%) 34px 0px/20px 27px repeat-x;
+        background: radial-gradient(10px 10px, transparent, transparent 45%, #9e9c9c 90%, white 92%, white 100%) 38px -5px/27px 29px repeat-x;
     }
 
     &--primary-50 {
@@ -21,11 +17,11 @@
     }
 
     &--secondary-100 {
-        background: radial-gradient(circle 10px, $s-secondary-100, $s-secondary-100, $s-white 60%, $s-white 100%) 47px 0px/20px 20px repeat-x;
+        background: radial-gradient(circle 12px, $s-secondary-100, $s-secondary-100, $s-white 60%, $s-white 100%) 47px 0px/20px 20px repeat-x;
     }
 
     &--blue-400 {
-        background: radial-gradient(circle 10px, $s-blue-400, $s-blue-400, $s-white 60%, $s-white 100%) 47px 0px/20px 20px repeat;
+        background: radial-gradient(circle 12px, $s-blue-400, $s-blue-400, $s-white 60%, $s-white 100%) 47px 0px/20px 20px repeat;
     }
 
     &--before-program {

@@ -4,13 +4,13 @@
     grid-template-columns: min-content;
     row-gap: 18px;
 
-    // @include for-tablet-landscape-up {
-    //     column-gap: 26px;
-    // }
+    @include for-tablet-landscape-up {
+        column-gap: 26px;
+    }
 
-    // @include for-desktop-up {
-    //     column-gap: 36px;
-    // }
+    @include for-desktop-up {
+        column-gap: 36px;
+    }
 
     grid-template-areas: "heading"
                         "content";
