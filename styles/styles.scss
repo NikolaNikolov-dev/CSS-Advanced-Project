@@ -2,10 +2,11 @@
 
 @import './03-generic/_generic-normalize';
 
+@import './01-settings/_settings-colors';
 @import './01-settings/_settings-shadows';
 @import './01-settings/_settings-breakpoints';
-@import './01-settings/_settings-colors';
 @import './01-settings/_settings-typography';
+@import './01-settings/_settings-animations';
 
 @import './04-elements/_elements-list';
 @import './04-elements/_elements-links';

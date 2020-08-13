@@ -25,12 +25,24 @@
             }
 
             .logo-vertical {
+
+                &:hover {
+
+                    @extend  %vibrate;
+                }
+
                 @include for-desktop-up {
                     display: none;
                 }
             }
 
             .logo-horizontal {
+
+                &:hover {
+
+                    @extend  %vibrate;
+                }
+
                 @include for-desktop-up {
                     display: block;
                 }
