@@ -28,6 +28,7 @@
             font-weight: bold !important;
             font-size: 30px !important;
             line-height: 36px !important;
+
             @include for-tablet-landscape-up {
                 font-style: normal;
                 font-weight: 600 !important;
@@ -467,6 +468,20 @@
                     grid-template-areas:
                         "icon heading"
                         "icon content";
+                }
+
+                &__content-link {
+                    position: relative;
+                    &:after {
+                        content: "";
+                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                        bottom: 1px;
+                        border-color: $s-secondary-500;
+                        border-width: 0 0 1px;
+                        border-style: solid;
+                    }
                 }
             }
 

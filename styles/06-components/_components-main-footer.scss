@@ -49,7 +49,6 @@
 
         @include for-tablet-landscape-up {
             display: grid;
-            // height: 100%;
             grid-template-rows: 38px;
             max-width: 177px;
             text-align: left;
@@ -116,7 +115,6 @@
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto;
-        // column-gap: 22px;
         color: $s-white;
         padding-top: 52px;
         padding-bottom: 32px;
@@ -133,9 +131,10 @@
         }
 
         &-section-heading {
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 22px;
+            font-style: normal !important;
+            font-weight: bold !important;
+            font-size: 18px !important;
+            line-height: 22px !important;
 
             @include for-tablet-landscape-up {
                 width: max-content;
