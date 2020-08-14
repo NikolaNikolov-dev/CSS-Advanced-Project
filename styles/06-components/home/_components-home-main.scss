@@ -444,7 +444,6 @@
     }
 
     &__info {
-        height: 100%;
         padding-top: 60px;
 
         @include for-tablet-landscape-up {
@@ -452,7 +451,6 @@
         }
 
         .o-page-content-wrapper {
-            height: 100%;
             display: grid;
             grid-template-rows: 1fr 12px 1fr;
             grid-template-columns: auto;
@@ -477,7 +475,7 @@
                         width: 100%;
                         position: absolute;
                         left: 0;
-                        bottom: 1px;
+                        bottom: -2px;
                         border-color: $s-secondary-500;
                         border-width: 0 0 1px;
                         border-style: solid;
@@ -501,6 +499,7 @@
         }
 
         &-location {
+            height: min-content;
             @include for-tablet-landscape-up {
                 height: min-content;
             }

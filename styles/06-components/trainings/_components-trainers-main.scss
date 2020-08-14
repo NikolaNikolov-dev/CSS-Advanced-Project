@@ -163,7 +163,6 @@
 
         &-heading {
             @include for-tablet-landscape-up {
-                font-style: normal;
                 font-weight: 600 !important;
                 font-size: 36px !important;
                 line-height: 44px !important;
@@ -247,14 +246,12 @@
         &-button-wrapper {
             display: grid;
             grid-template-rows: 48px;
-            grid-template-columns: auto;
+            grid-template-columns: 335px;
+            justify-content: center;
 
-            .btn {
-                justify-self: stretch;
-
-                @include for-tablet-landscape-up {
-                    max-width: 140px;
-                }
+            @include for-tablet-landscape-up {
+                grid-template-columns: 140px;
+                justify-content: unset;
             }
         }
     }
